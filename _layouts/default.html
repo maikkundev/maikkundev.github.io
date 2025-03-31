@@ -24,11 +24,13 @@
         <div class="blog-posts">
           <h2>Blog Posts</h2>
           <ul>
-            {%- for post in site.posts limit: 5 -%}
+            {%- if site.posts.size == 0 -%}
+            <em>No posts yet :c</em>
+            {%- else-%} {%- for post in site.posts limit: 5 -%}
             <li>
               <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
             </li>
-            {%- endfor -%}
+            {%- endfor -%} {%- endif -%}
           </ul>
         </div>
       </aside>

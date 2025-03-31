@@ -1,3 +1,6 @@
+# Jekyll compile dir
+_site/
+
 *.gem
 *.rbc
 /.config

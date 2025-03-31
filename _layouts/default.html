@@ -1,12 +1,40 @@
+<!-- _layouts/default.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ site.title }} | {{ page.title }}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title | default: site.title }}</title>
+    <!-- Jekyll will compile assets/css/main.scss into assets/css/main.css -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
   </head>
   <body>
-    {{ content }}
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="profile">
+          <div class="avatar"></div>
+          <h1>Michael Avagianos</h1>
+          <p><em>MaikkunDev</em></p>
+          <p>Web Developer</p>
+          <p><a href="mailto:mkkndev@outlook.com">mkkndev@outlook.com</a></p>
+          <p>Greece</p>
+        </div>
+        <hr />
+        <div class="blog-posts">
+          <h2>Blog Posts</h2>
+          <ul>
+            {%- for post in site.posts limit: 5 -%}
+            <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">{{ content }}</main>
+    </div>
   </body>
 </html>

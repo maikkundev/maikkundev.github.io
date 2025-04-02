@@ -158,7 +158,7 @@ a {
       grid-template-columns: repeat(2, 1fr);
     }
     @media (min-width: 1024px) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
 
     .project-card {
@@ -190,12 +190,45 @@ a {
 
       .project-links {
         display: flex;
-        justify-content: space-between;
 
         a {
           font-size: 0.9rem;
         }
       }
     }
+  }
+}
+
+// Mobile
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    border-right: none !important;
+    padding: 1rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .sidebar .profile,
+  .sidebar .blog-posts {
+    width: 100% !important;
+  }
+
+  .main-content {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-card {
+    margin: 1rem;
   }
 }

@@ -7,6 +7,7 @@
     <title>{{ page.title | default: site.title }}</title>
     <!-- Jekyll will compile assets/css/main.scss into assets/css/main.css -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -14,16 +15,27 @@
       <aside class="sidebar">
         <div class="profile">
           <div class="avatar">
-            <img
-              src="https://media.licdn.com/dms/image/v2/D4D03AQEkU6e_GxaRhA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721129905698?e=1749081600&v=beta&t=6ohE4oXYvOU4BeOyTjDrgixV8dWRvkjnJL6sHiD6lm8"
-              alt="A picture of me."
-            />
+            <img src="{{ '/assets/images/pfp.jpeg' | relative_url }}" alt="A picture of me." />
           </div>
           <h1>Michael Avagianos</h1>
           <p><em>MaikkunDev</em></p>
           <p>Web Developer</p>
           <p><a href="mailto:mkkndev@outlook.com">mkkndev@outlook.com</a></p>
           <p>Greece</p>
+          <div class="social-links">
+            <a href="mailto:mkkndev@outlook.com" class="social-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/maikkundev" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mkkndev" class="social-link">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/maikkundev" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
           <hr />
           <h3>More about me:</h3>
           <p class="more-about-me">

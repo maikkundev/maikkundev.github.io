@@ -17,7 +17,7 @@
     <div class="wrapper">
       <!-- Sidebar -->
       <aside class="sidebar">
-        <div class="profile">
+        <section class="profile">
           <div class="avatar">
             <img src="{{ '/assets/images/pfp.jpeg' | relative_url }}" alt="A picture of me." />
           </div>
@@ -42,13 +42,13 @@
           </div>
           <hr />
           <h3>More about me:</h3>
-          <p class="more-about-me">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique odit cupiditate, commodi vitae repellat tempora magnam
-            adipisci doloribus nemo itaque tempore? Nam maiores tenetur itaque distinctio deserunt non, odio a.
-          </p>
-        </div>
+          <section class="more-about-me">
+            <p>Web Developer, primarily focused on back-end development.</p>
+            <p>Currently studying Computer Science at Ionian University.</p>
+          </section>
+        </section>
         <hr />
-        <div class="blog-posts">
+        <section class="blog-posts">
           <h2>Blog Posts</h2>
           <ul>
             {%- if site.posts.size == 0 -%}
@@ -59,7 +59,7 @@
             </li>
             {%- endfor -%} {%- endif -%}
           </ul>
-        </div>
+        </section>
       </aside>
 
       <!-- Main Content -->
